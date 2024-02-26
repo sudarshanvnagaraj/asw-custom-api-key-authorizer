@@ -1,8 +1,5 @@
-const ExceptionWrapper = require('exception-handler');
-const commonMessage = require('./constants/common-messages');
 const CustomKeyWrapper = require('./constants/custom-credentials');
 const customKeyHandler = new CustomKeyWrapper();
-const exceptionHandler = new ExceptionWrapper();
 exports.handler = async (event) => {
     const findValidateTokenTime = new Date();
     const { headers } = event;
